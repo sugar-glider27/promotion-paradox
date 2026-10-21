@@ -172,10 +172,22 @@
                 <p>Design Decisions and Rationale:</p>
 
                 <ul>
-                    <li>A ladder to symbolize the NYPD’s chain of command and reinforce the relationship between rank and substantiation rates, using a blue color palette that matches the NYPD colors. Score: 2</li>
-                    <li>A horizontal bar graph that starts at 15% substantiation rate of each officer, instead of 0%, a choice made to make gaps between rankings appear larger and more persuasive for the proposition. Score: -1.5</li>
-                    <li>The observed rankings (lieutenant, sergeant, and police officer) are a subset of all NYPD rank levels in the dataframe, simplifying the visualization’s rank distributions. Score: -2</li>
-                    <li>The visualization displays mean substantiation rates at each ranking, simplifying results. Score: -0.5</li>
+                    <li>
+                        A ladder to symbolize the NYPD’s chain of command and reinforce the relationship between rank and substantiation rates. The color scheme was chosen to match the NYPD colors, making the visualization more relevant to its subject. Although we considered other approaches, such as including the badge symbols, this was also effective in portraying the ranks. 
+                        <strong>Score: 2</strong>
+                    </li>
+                    <li>
+                        A horizontal bar graph that compares mean substantiation rates across officer ranks. The x-axis starts at 15% instead of 0%, a choice we made to make gaps between rankings appear larger as a visual argument for the proposition. However, this choice was also a bold decision that risks exaggerating the differences. 
+                        <strong>Score: -1.5</strong>
+                    </li>
+                    <li>
+                        The observed rankings (lieutenant, sergeant, and police officer) are a subset of all NYPD rank levels in the dataframe. This is a visual simplification that makes rank distributions easier to understand, but excluding all other ranks could limit the observed information. 
+                        <strong>Score: -2</strong>
+                    </li>
+                    <li>
+                        The visualization displays mean substantiation rates for each officer ranking. This simplifies the results and comparisons that lower substantiation rates are observed across high-ranking observations. Although this risks hiding variations at each rank, we made this decision to avoid making the graph too messy with individual observations seen in a graph like a scatterplot. 
+                        <strong>Score: -0.5</strong>
+                    </li>
                 </ul>
             </section>
 
@@ -191,16 +203,31 @@
                 <p>Design Decisions and Rationale:</p>
 
                 <ul>
-                    <li>RATIONALE_1</li>
-                    <li>RATIONALE_2</li>
-                    <li>RATIONALE_3</li>
+                    <li>
+                        Lighter and darker shades of blue represent the severity of substantiation, and similar to the “FOR” visualization, matches the NYPD colors. Unlike the ladder from before, this visualization has a staircase-like appearance and text annotations for the increasing substantiation, symbolizing the officers who later moved up in rank. 
+                        <strong>Score: 2</strong>
+                    </li>
+                    <li>
+                        A subset of officers received allegations both as police officers and at higher ranks were observed. Although there is a risk of bias by filtering out officers who received allegations at one rank, this analysis specifically looks at the overlap between ranking groups and allows us to compare substantiation rates across ranks of the same people. 
+                        <strong>Score: -2</strong>
+                    </li>
+                    <li>
+                        A combined higher-ranking group compared to police officers, which simplifies the comparison across ranks. This is an effective decision to analyze how overall increase is mainly caused by the police officer group over any higher ranks. 
+                        <strong>Score: -1.5</strong>
+                    </li>
                 </ul>
             </section>
 
             <section>
                 <h2>Final Reflection</h2>
 
-                <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+                <p>
+                    The design process across both visualizations included multiple rounds of implementation and changes, including the decisions on calculating substantiation rates across each officer ranking differently based on their groupings. We made many deceptive choices to highlight a strong overall increase when the result is primarily driven by one subgroup.
+                    <br><br>
+                    For example, we ran into difficulties during the design process when it was difficult to acknowledge overlapping groups in the visualizations, since some officers could receive allegations at different ranks due to situations like rank promotions. An officer who belongs to multiple groups influences the rates of all those groups, but the visualization presents them as independent for a clear trend between rank and substantiation rates. Differences in substantiation rates may reflect which officers are included rather than the rank itself. An officer with a high substantiation rate who stays as an officer only contributes to the police officer group, but an officer with a low rate who becomes a sergeant contributes to both groups.
+                    <br><br>
+                    When we were calculating the proportions by comparing the same individuals across ranks, this makes promotion impact substantiation rates, but it only includes officers who received allegations while being at least two different ranks. The combination of higher-ranks also obscures which groups are responsible. It also suggests that moving up in rank leads to higher substantiation rates, even though the analysis cannot establish causation.
+                </p>
             </section>
         </main>
         <script src="ladder.js"></script>
