@@ -139,6 +139,12 @@
                     }
                 }
             }
+
+            figure img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
         </style>
     </head>
 
@@ -228,7 +234,7 @@
             <section>
                 <h2>Final Reflection</h2>
                 <p>
-                    Throughout the design process, we explored how a dataset could be used to support two opposing arguments about the relationship between NYPD officer rank and substantiation rates. We went through multiple rounds of implementation and made different decisions about how to calculate substantiation rates based on officer rank and groupings. We made several deceptive choices so that our For visualization emphasized the decreasing rates as rank increased, while our Against visualization focused on a subset of officers whose substantiation rates increased at higher ranks. This showed us how data selection and visualization design can influence the conclusions readers draw from the same dataset. We were surprised by how the same dataset could produce two convincing but opposite patters.
+                    Throughout the design process, we explored how a dataset could be used to support two opposing arguments about the relationship between NYPD officer rank and substantiation rates. We went through multiple rounds of implementation and made different decisions about how to calculate substantiation rates based on officer rank and groupings. We made several deceptive choices so that our For visualization emphasized the decreasing rates as rank increased, while our Against visualization focused on a subset of officers whose substantiation rates increased at higher ranks. This showed us how data selection and visualization design can influence the conclusions readers draw from the same dataset. We were surprised by how the same dataset could produce two convincing but opposite patterns.
                 </p>
                 <p>
                     We ran into some difficulties during the design process. One challenge we encountered was dealing with officers who received allegations at multiple ranks. Because an officer could appear in more than one rank group due to promotions, the groups could overlap, even though the visualizations could make them appear separate. This made it difficult to determine whether differences in substantiation rates were associated with rank itself or with the particular officers included in each group. For example, an officer with a high substantiation rate who remains a police officer only contributes to the police officer group, while an officer with a low substantiation rate who later becomes a sergeant may contribute to both groups. For our opposing visualization, we focused on officers who received allegations at multiple ranks, allowing us to compare rates across ranks for the same individuals. However, this also leaves out officers who only received allegations at one rank, potentially introducing selection bias.
