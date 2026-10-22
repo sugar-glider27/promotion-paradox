@@ -199,7 +199,7 @@ svg.append("text")
     .attr("font-size", 29)
     .attr("font-weight", 700)
     .attr("fill", "#172033")
-    .text("Higher rank, lower substantiation");
+    .text("Higher rank, Lower substantiation");
 
 
 // subtitle
