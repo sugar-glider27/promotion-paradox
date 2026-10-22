@@ -37,7 +37,7 @@ const svg = d3
     .attr("role", "img")
     .attr(
         "aria-label",
-        "Gray ladder showing decreasing substantiation rates as NYPD officer rank increases."
+        "Gray ladder comparing average substantiation rates across increasing NYPD ranks."
     )
     .style("display", "block");
 
